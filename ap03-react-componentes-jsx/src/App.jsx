@@ -1,35 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './styles.css'
+const App =() => {
+  const estilosBotao={marginTop: 12, paddingTop: 8, paddingBottom: 8, backgroundColor: 'blueviolet', color: 'white', border: 'none', width: '100%', borderRadius: 8}
 
-function App() {
-  const [count, setCount] = useState(0)
+  const textoDoRotulo= 'Nome:'
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+  const obterTextoDoBotao = () => {return "Enviar"}
+  
+  const aoClicar = () =>{alert('Hello')}
+
+  return <div style={{margin: 'auto', width: 768, backgroundColor: '#EEE',padding: 12, borderRadius: 8}}>
+  <label 
+  className='rotulo'
+  htmlFor='nome'
+  style={{display: 'block', marginBottom: 4}}
+  >Nome:  </label>
+  <input type="text" id="nome" style={{paddingTop: 8, paddingBottom: 8, borderStyle: 'hiden', width: '100%', borderRadius: 8, outline: 'none'}}/>
+  <button style={estilosBotao}
+        onClick={() => aoClicar()}>
+        {obterTextoDoBotao()}</button>
+  </div>
 }
 
 export default App
