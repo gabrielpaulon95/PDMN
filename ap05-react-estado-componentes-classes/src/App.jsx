@@ -102,7 +102,7 @@ class App extends React.Component{
           <div className="col-12">
             {
               (!this.state.latitute && !this.state.mensagemDeErro) ?
-              <Loading/>
+              <Loading texto = 'Por Favor, libere o acesso à sua localização.'/>
               :
               this.state.mensagemDeErro ?
               <p className="border rounded p-2 fs-1 text-center">
